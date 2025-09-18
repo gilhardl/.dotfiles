@@ -1,45 +1,50 @@
 # dotfiles
 
 This repository contains my personal dotfiles to configure:
-- ZSH & Oh My Zsh
+
+- ZSH
 - Git
-- asdf
 - NPM
+- Vim
+
+## Requirements
+
+- [homebrew](https://brew.sh/)
+- [stow](https://www.gnu.org/software/stow/)
 
 ## Installation
 
+Clone the repository:
+
 ```sh
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/gilhardl/dotfiles/main/install.sh)"
+git clone --recurse-submodules https://github.com/gilhardl/dotfiles.git ~/.dotfiles
 ```
 
-The install script will:
-1. Clone the repository to `~/.dotfiles`
-2. Backup existing dotfiles to the `~/.dotfiles/backup` directory.
-3. Symlink the dotfiles to your home directory.
+Symlink the dotfiles to your home directory:
+
+```sh
+cd ~/.dotfiles
+stow .
+```
 
 ## What's Inside
+
+### Shell (ZSH)
+
+- `.zsh/zsh-autosuggestions` - [Zsh auto-complete](dotfiles/.zsh/zsh-autosuggestions) - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
+- `.zsh/zsh-syntax-highlighting` - [Zsh syntax highlighting](dotfiles/.zsh/zsh-syntax-highlighting) - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
+- `.zsh/fzf` - [Fzf](dotfiles/.zsh/fzf) - [fzf](https://github.com/junegunn/fzf)
+- `.zsh/zen` - [Zen prompt](dotfiles/.zsh/zen) - [zen.zsh prompt](https://github.com/cybardev/zen.zsh)
+- `.zsh/zoxide` - [Zoxide](dotfiles/.zsh/zoxide) - [zoxide](https://github.com/ajeetdsouza/zoxide)
 
 ### Dotfiles
 
 - `.gitconfig` - [Git configuration](dotfiles/.gitconfig)
 - `.npmrc` - [NPM configuration](dotfiles/.npmrc)
-- `.tool-versions` - [asdf tools versions](dotfiles/.tool-versions)
+- `.vimrc` - [Vim configuration](dotfiles/.vimrc)
 - `.zprofile` - [ZSH profile](dotfiles/.zprofile)
 - `.zshrc` - [ZSH configuration](dotfiles/.zshrc)
 
-### Custom scripts
-
-- `install.sh` - Installation script
-
-## Customization
-
-You can customize the installation by forking this repo and editing the dotfiles to your liking. Then you can run the `install.sh` script by replacing the `https://raw.githubusercontent.com/gilhardl/dotfiles/main/install.sh` with your fork url.
-
-```sh
-bash -c "$(curl -fsSL https://raw.githubusercontent.com/<your-username>/dotfiles/main/install.sh)"
-```
-
 ## License
 
-This project is open-sourced under the [MIT License](LICENSE).
-
+This project is open-sourced under MIT License, see [LICENSE.txt](LICENSE.txt).
