@@ -31,20 +31,20 @@ stow .
 
 ### Shell (ZSH)
 
-- `.zsh/zsh-autosuggestions` - [Zsh auto-complete](dotfiles/.zsh/zsh-autosuggestions) - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions)
-- `.zsh/zsh-syntax-highlighting` - [Zsh syntax highlighting](dotfiles/.zsh/zsh-syntax-highlighting) - [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting)
-- `.zsh/fzf` - [Fzf](dotfiles/.zsh/fzf) - [fzf](https://github.com/junegunn/fzf)
-- `.zsh/zen` - [Zen prompt](dotfiles/.zsh/zen) - [zen.zsh prompt](https://github.com/cybardev/zen.zsh)
-- `.zsh/zoxide` - [Zoxide](dotfiles/.zsh/zoxide) - [zoxide](https://github.com/ajeetdsouza/zoxide)
+- [`.zsh/zsh-autosuggestions`](.zsh/zsh-autosuggestions) - Zsh auto-complete (see [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions))
+- [`.zsh/zsh-syntax-highlighting`](.zsh/zsh-syntax-highlighting) - Zsh syntax highlighting (see [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting))
+- [`.zsh/zen`](.zsh/zen) - ZSH prompt (see [zen.zsh](https://github.com/cybardev/zen.zsh))
 
 ### Dotfiles
 
-- `.gitconfig` - [Git configuration](dotfiles/.gitconfig)
-- `.npmrc` - [NPM configuration](dotfiles/.npmrc)
-- `.vimrc` - [Vim configuration](dotfiles/.vimrc)
-- `.zprofile` - [ZSH profile](dotfiles/.zprofile)
-- `.zshrc` - [ZSH configuration](dotfiles/.zshrc)
+- [`.gitconfig`](.gitconfig) - Git configuration
+- [`.npmrc`](.npmrc) - NPM configuration
+- [`.vimrc`](.vimrc) - Vim configuration
+- [`.zprofile`](.zprofile) - ZSH profile
+- [`.zshrc`](.zshrc) - ZSH configuration
 
 ## License
 
-This project is open-sourced under MIT License, see [LICENSE.txt](LICENSE.txt).
+This project is open-sourced under MIT License.
+
+See [LICENSE.txt](LICENSE.txt).
