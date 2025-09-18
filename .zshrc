@@ -10,6 +10,9 @@ source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Syntax highlighting for zsh (see https://github.com/zsh-users/zsh-syntax-highlighting)
 source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+# Homebrew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+
 # Fuzzy finder (see https://github.com/junegunn/fzf)
 source <(fzf --zsh)
 
