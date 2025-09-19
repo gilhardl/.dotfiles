@@ -4,12 +4,6 @@ autoload -Uz promptinit
 promptinit
 prompt zen
 
-# Zsh autosuggestions (see https://github.com/zsh-users/zsh-autosuggestions)
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Syntax highlighting for zsh (see https://github.com/zsh-users/zsh-syntax-highlighting)
-source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
