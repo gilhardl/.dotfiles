@@ -1,17 +1,1 @@
-# Local env files
-.env
-.env.*
-!.env.example
-
-# Compiled output and temporary files
-/dist
-/tmp
-.temp
-
-# Logs
-logs
-*.log
-
-# System files
 .DS_Store
-Thumbs.db

@@ -4,8 +4,8 @@ This repository contains my personal dotfiles to configure:
 
 - ZSH
 - Git
+- NeoVim
 - NPM
-- Vim
 
 ## Requirements
 
@@ -20,19 +20,33 @@ Clone the repository:
 git clone --recurse-submodules https://github.com/gilhardl/dotfiles.git ~/.dotfiles
 ```
 
+Change git config:
+
+```sh
+sed -i '' -e 's/Lucas GILHARD/Your Name/g' git/.gitconfig
+sed -i '' -e 's/lucas@gilhard.fr/your@email.com/g' git/.gitconfig
+```
+
+Change NPM config:
+```sh
+sed -i '' -e 's/Lucas GILHARD/Your Name/g' npm/.npmrc
+sed -i '' -e 's/lucas@gilhard\.fr/your@email\.com/g' npm/.npmrc
+sed -i '' -e 's/http:\/\/github\.com\/gilhardl/https:\/\/your\-author\-url\.com/g' npm/.npmrc
+```
+
+
+
 Symlink the dotfiles to your home directory:
 
 ```sh
 cd ~/.dotfiles
-stow .
+stow zsh && stow git && stow nvim && stow npm
 ```
 
 ## What's Inside
 
 ### Shell (ZSH)
 
-- [`.zsh/zsh-autosuggestions`](.zsh/zsh-autosuggestions) - Zsh auto-complete (see [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions))
-- [`.zsh/zsh-syntax-highlighting`](.zsh/zsh-syntax-highlighting) - Zsh syntax highlighting (see [zsh-syntax-highlighting](https://github.com/zsh-users/zsh-syntax-highlighting))
 - [`.zsh/zen`](.zsh/zen) - ZSH prompt (see [zen.zsh](https://github.com/cybardev/zen.zsh))
 
 ### Dotfiles
