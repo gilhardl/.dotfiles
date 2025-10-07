@@ -28,13 +28,12 @@ sed -i '' -e 's/lucas@gilhard.fr/your@email.com/g' git/.gitconfig
 ```
 
 Change NPM config:
+
 ```sh
 sed -i '' -e 's/Lucas GILHARD/Your Name/g' npm/.npmrc
-sed -i '' -e 's/lucas@gilhard\.fr/your@email\.com/g' npm/.npmrc
-sed -i '' -e 's/http:\/\/github\.com\/gilhardl/https:\/\/your\-author\-url\.com/g' npm/.npmrc
+sed -i '' -e 's/lucas@gilhard.fr/your@email.com/g' npm/.npmrc
+sed -i '' -e 's,http://github.com/gilhardl,https://your-author-url.com,g' npm/.npmrc
 ```
-
-
 
 Symlink the dotfiles to your home directory:
 
@@ -53,7 +52,6 @@ stow zsh && stow git && stow nvim && stow npm
 
 - [`.gitconfig`](.gitconfig) - Git configuration
 - [`.npmrc`](.npmrc) - NPM configuration
-- [`.vimrc`](.vimrc) - Vim configuration
 - [`.zprofile`](.zprofile) - ZSH profile
 - [`.zshrc`](.zshrc) - ZSH configuration
 
