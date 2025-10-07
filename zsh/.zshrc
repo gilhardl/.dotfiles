@@ -8,7 +8,7 @@ source <(fzf --zsh)
 source <(zoxide init --cmd cd zsh)
 
 # Zen prompt
-fpath+="$HOME/.zsh/zen"
+fpath+="$HOME/.config/zsh/zen"
 autoload -Uz promptinit
 promptinit
 prompt zen
