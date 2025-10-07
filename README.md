@@ -21,27 +21,13 @@ Clone the repository:
 git clone --recurse-submodules https://github.com/gilhardl/dotfiles.git ~/.dotfiles
 ```
 
-Change Git config:
+Install dotfiles:
 
 ```sh
-sed -i '' -e 's/Lucas GILHARD/Your Name/g' git/.gitconfig
-sed -i '' -e 's/lucas@gilhard.fr/your@email.com/g' git/.gitconfig
+./install.sh
 ```
 
-Change NPM config:
-
-```sh
-sed -i '' -e 's/Lucas GILHARD/Your Name/g' npm/.npmrc
-sed -i '' -e 's/lucas@gilhard.fr/your@email.com/g' npm/.npmrc
-sed -i '' -e 's,http://github.com/gilhardl,https://your-author-url.com,g' npm/.npmrc
-```
-
-Symlink the dotfiles to your home directory:
-
-```sh
-cd ~/.dotfiles
-stow zsh && stow git && stow nvim && stow npm
-```
+> NOTE: The install script will ask for your name, email, and website to customize the dotfiles.
 
 ## What's Inside
 
