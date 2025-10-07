@@ -24,3 +24,9 @@ keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file e
 keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" })
 keymap.set("n", "<leader>ec", "<cmd>NvimTreeCollapse<CR>", { desc = "Collapse file explorer" })
 keymap.set("n", "<leader>er", "<cmd>NvimTreeRefresh<CR>", { desc = "Refresh file explorer" })
+
+keymap.set("n", "<leader>ff", "<cmd>Telescope find_files hidden=true<CR>", { desc = "Fuzzy find files in cwd" })
+keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles hidden=true<CR>", { desc = "Fuzzy find recent files" })
+keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", { desc = "Fuzzy search text in cwd" })
+keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", { desc = "Search text in cwd" })
+keymap.set("n", "<leader>fg", "<cmd>Telescope git_status<CR>", { desc = "Fuzzy search in git log" })
