@@ -1,29 +1,18 @@
 ZSH_HOME=$HOME/.zsh 
+ZSH_CONFIG=$HOME/.config/zsh
 
-# ZSH History
-export HISTFILE=$ZSH_HOME/.zsh_history  # History file
-export HISTSIZE=10000                   # Commands count loaded into memory
-export SAVEHIST=10000                   # Commands count saved on file
-setopt HIST_IGNORE_ALL_DUPS             # Ignore dupplicates
-setopt HIST_FIND_NO_DUPS                # Hide dupplicates on search
+source $ZSH_CONFIG/history.zsh
+source $ZSH_CONFIG/prompt.zsh
+source $ZSH_CONFIG/alias.zsh
+source $ZSH_CONFIG/auto-suggestions.zsh
+source $ZSH_CONFIG/completions.zsh
+source $ZSH_CONFIG/syntax-highlight.zsh
 
-# Homebrew
-eval "$(/opt/homebrew/bin/brew shellenv)"
+source $ZSH_CONFIG/homebrew.zsh
+source $ZSH_CONFIG/fzf.zsh
+source $ZSH_CONFIG/zoxide.zsh
+source $ZSH_CONFIG/alias-finder.zsh
+source $ZSH_CONFIG/git-commit.zsh
 
-# Fuzzy finder (see https://github.com/junegunn/fzf)
-source <(fzf --zsh)
-
-# Smarter cd command (see https://github.com/ajeetdsouza/zoxide)
-source <(zoxide init --cmd cd zsh)
-
-# Prompt
-fpath+="$HOME/.config/zsh/plugins/zen"
-autoload -Uz promptinit
-promptinit
-prompt zen
-
-# opencode
 export PATH=$PATH:/Users/gilhardl/.opencode/bin
-
-# LM Studio
 export PATH=$PATH:/Users/gilhardl/.lmstudio/bin

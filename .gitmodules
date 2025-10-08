@@ -1,3 +1,13 @@
-[submodule "zsh/.config/zsh/plugins/zen"]
-	path = zsh/.config/zsh/plugins/zen
+[submodule "zsh/.config/zsh/plugins/zen.zsh"]
+	path = zsh/.config/zsh/plugins/zen.zsh
 	url = https://github.com/cybardev/zen.zsh.git
+[submodule "zsh/.config/zsh/plugins/zsh-autosuggestions"]
+	path = zsh/.config/zsh/plugins/zsh-autosuggestions
+	url = https://github.com/zsh-users/zsh-autosuggestions
+[submodule "zsh/.config/zsh/plugins/zsh-completions"]
+	path = zsh/.config/zsh/plugins/zsh-completions
+	url = https://github.com/zsh-users/zsh-completions
+[submodule "zsh/.config/zsh/plugins/fast-syntax-highlighting"]
+	path = zsh/.config/zsh/plugins/fast-syntax-highlighting
+	url = https://github.com/zdharma-zmirror/fast-syntax-highlighting
+
