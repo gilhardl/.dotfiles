@@ -1,3 +1,12 @@
+ZSH_HOME=$HOME/.zsh 
+
+# ZSH History
+export HISTFILE=$ZSH_HOME/.zsh_history  # History file
+export HISTSIZE=10000                   # Commands count loaded into memory
+export SAVEHIST=10000                   # Commands count saved on file
+setopt HIST_IGNORE_ALL_DUPS             # Ignore dupplicates
+setopt HIST_FIND_NO_DUPS                # Hide dupplicates on search
+
 # Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -7,16 +16,14 @@ source <(fzf --zsh)
 # Smarter cd command (see https://github.com/ajeetdsouza/zoxide)
 source <(zoxide init --cmd cd zsh)
 
-# Zen prompt
-fpath+="$HOME/.config/zsh/zen"
+# Prompt
+fpath+="$HOME/.config/zsh/plugins/zen"
 autoload -Uz promptinit
 promptinit
 prompt zen
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/gilhardl/.lmstudio/bin"
-# End of LM Studio CLI section
-
-
 # opencode
-export PATH=/Users/gilhardl/.opencode/bin:$PATH
+export PATH=$PATH:/Users/gilhardl/.opencode/bin
+
+# LM Studio
+export PATH=$PATH:/Users/gilhardl/.lmstudio/bin
