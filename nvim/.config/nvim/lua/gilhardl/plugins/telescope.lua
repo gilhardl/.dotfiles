@@ -26,7 +26,7 @@ return {
             '--line-number',
             '--column',
             '--smart-case',
-            '-uu'  -- 
+            '--hidden'
           }
         },
       })
