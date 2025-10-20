@@ -1,1 +1,1 @@
-fpath=($ZSH/plugins/zsh-completions/src $fpath)
+fpath=($ZSH_CONFIG/plugins/zsh-completions/src $fpath)

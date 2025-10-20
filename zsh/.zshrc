@@ -1,18 +1,35 @@
-ZSH_HOME=$HOME/.zsh 
+ZSH_HOME=$HOME/.zsh
 ZSH_CONFIG=$HOME/.config/zsh
 
-source $ZSH_CONFIG/history.zsh
-source $ZSH_CONFIG/prompt.zsh
-source $ZSH_CONFIG/alias.zsh
-source $ZSH_CONFIG/auto-suggestions.zsh
-source $ZSH_CONFIG/completions.zsh
-source $ZSH_CONFIG/syntax-highlight.zsh
+source $ZSH_CONFIG/history.zsh            # Shell history
 
-source $ZSH_CONFIG/homebrew.zsh
-source $ZSH_CONFIG/fzf.zsh
-source $ZSH_CONFIG/zoxide.zsh
-source $ZSH_CONFIG/alias-finder.zsh
-source $ZSH_CONFIG/git-commit.zsh
+source $ZSH_CONFIG/homebrew.zsh           # Package manager
 
+source $ZSH_CONFIG/fzf.zsh                # Fuzzy finder
+source $ZSH_CONFIG/zoxide.zsh             # Better cd command
+
+source $ZSH_CONFIG/prompt.zsh             # Zen prompt
+
+source $ZSH_CONFIG/alias.zsh              # Useful aliases
+source $ZSH_CONFIG/alias-finder.zsh       # Helper to find existing aliases
+
+source $ZSH_CONFIG/completions.zsh        # Commands completions
+source $ZSH_CONFIG/auto-suggestions.zsh   # Commands auto-suggestions
+
+source $ZSH_CONFIG/syntax-highlight.zsh   # Syntax highlighting
+
+source $ZSH_CONFIG/git-commit.zsh         # Conventionnal commit helper
+
+# opencode
 export PATH=$PATH:/Users/gilhardl/.opencode/bin
+
+# LM Studio
 export PATH=$PATH:/Users/gilhardl/.lmstudio/bin
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun completions
+[ -s "/Users/gilhardl/.bun/_bun" ] && source "/Users/gilhardl/.bun/_bun"
+
