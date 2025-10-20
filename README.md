@@ -63,7 +63,11 @@ NeoVim configuration is splitted into core configuration and lazy plugins.
 - [`plugins/init`](./nvim/.config/nvim/lua/gilhardl/plugins/init.lua) - Simple utilities which doesn't need configuration
 - [`plugins/colorscheme`](./nvim/.config/nvim/lua/gilhardl/plugins/colorscheme.lua) - Theme colorscheme
 - [`plugins/auto-dark-mode`](./nvim/.config/nvim/lua/gilhardl/plugins/auto-dark-mode.lua) - Switch background brightness when system mode changes
+- [`plugins/auto-session`](./nvim/.config/nvim/lua/gilhardl/plugins/auto-session.lua) - Session management
+- [`plugins/alpha`](./nvim/.config/nvim/lua/gilhardl/plugins/alpha.lua) - Startup dashboard
+- [`plugins/bufferline`](./nvim/.config/nvim/lua/gilhardl/plugins/bufferline.lua) - Buffer tabs
 - [`plugins/nvim-tree`](./nvim/.config/nvim/lua/gilhardl/plugins/nvim-tree.lua) - File explorer
+- [`plugins/telescope`](./nvim/.config/nvim/lua/gilhardl/plugins/telescope.lua) - Fuzzy finder
 - [`plugins/which-key`](./nvim/.config/nvim/lua/gilhardl/plugins/which-key.lua) - Keybindings helper
 
 ## License
