@@ -30,6 +30,10 @@ keymap.set("n", "<leader>fr", "<cmd>Telescope oldfiles hidden=true<CR>", { desc 
 keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<CR>", { desc = "Fuzzy search text in cwd" })
 keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<CR>", { desc = "Search text in cwd" })
 keymap.set("n", "<leader>fg", "<cmd>Telescope git_status<CR>", { desc = "Fuzzy search in git log" })
+keymap.set("n", "<leader>ft", "<cmd>TodoTelescope<cr>", { desc = "Find todos" })
 
 keymap.set("n", "<leader>wr", "<cmd>AutoSession restore<CR>", { desc = "Restore session for cwd" })
 keymap.set("n", "<leader>ws", "<cmd>AutoSession save<CR>", { desc = "Save session for auto session root dir" })
+
+keymap.set("n", "]t", function() todo_comments.jump_next() end, { desc = "Next todo comment" })
+keymap.set("n", "[t", function() todo_comments.jump_prev() end, { desc = "Previous todo comment" })
