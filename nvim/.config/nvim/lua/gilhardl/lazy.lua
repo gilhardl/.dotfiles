@@ -11,8 +11,14 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup("gilhardl.plugins", {
-  checker = {
-    enabled = true
+require("lazy").setup(
+  {
+    { import = "gilhardl.plugins" },
+    { import = "gilhardl.plugins.lsp" },
+  },
+  {
+    checker = {
+      enabled = true
+    }
   }
-})
+)
