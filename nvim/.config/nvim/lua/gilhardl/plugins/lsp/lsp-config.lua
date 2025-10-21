@@ -4,7 +4,7 @@ return {
   dependencies = {
     "hrsh7th/cmp-nvim-lsp",
     { "antosha417/nvim-lsp-file-operations", config = true },
-    { "folke/neodev.nvim", opts = {} },
+    { "folke/neodev.nvim",                   opts = {} },
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -119,10 +119,11 @@ return {
 
     mason_tool_installer.setup({
       ensure_installed = {
+        "eslint_d", -- js linter
         "prettier", -- prettier formatter
-        "stylua", -- lua formatter
-        "isort", -- python formatter
-        "black", -- python formatter
+        "stylua",   -- lua formatter
+        "pylint",   -- python linter
+        "black",    -- python formatter
       },
     })
   end,
