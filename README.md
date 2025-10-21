@@ -3,6 +3,7 @@
 This repository contains my personal dotfiles to configure:
 
 - Ghostty - Terminal
+- Tmux - Terminal multiplexer
 - ZSH - Shell
 - Git - Version control
 - NPM - Node packages manager
@@ -35,9 +36,25 @@ Install dotfiles:
 
 - [`.config/ghostty/config`](ghostty/.config/ghostty/config) - Ghostty configuration
 
+### Tmux
+
+#### Core Configuration
+
+- [`.tmux.conf`](tmux/.tmux.conf) - Tmux configuration with split navigation, mouse support, and auto-restore sessions
+
+#### Plugins
+
+Git submodules located in `.tmux/plugins/`:
+
+- [tpm](https://github.com/tmux-plugins/tpm) - Tmux plugin manager
+- [tmux-themepack](https://github.com/jimeh/tmux-themepack) - Powerline theme
+- [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) - Seamless navigation between vim and tmux splits
+- [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) - Restore tmux sessions after system restart
+- [tmux-continuum](https://github.com/tmux-plugins/tmux-continuum) - Continuous saving and automatic restore of tmux sessions
+
 ### ZSH
 
-#### Core Files
+#### Core Configuration
 
 - [`.zprofile`](zsh/.zprofile) - Environment variables (SHELL, EDITOR)
 - [`.zshrc`](zsh/.zshrc) - Main ZSH startup script that sources all configuration modules
@@ -59,6 +76,7 @@ Install dotfiles:
 #### Plugins
 
 Git submodules located in `.config/zsh/plugins/`:
+
 - [fast-syntax-highlighting](https://github.com/zdharma-continuum/fast-syntax-highlighting) - Syntax highlighting for commands
 - [zen.zsh](https://github.com/cybardev/zen.zsh) - Minimalistic prompt theme
 - [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) - Fish-like autosuggestions
@@ -105,8 +123,7 @@ NeoVim configuration uses [lazy.nvim](https://github.com/folke/lazy.nvim) as plu
 
 #### LSP & Completion
 
-- [`plugins/lsp/mason.lua`](nvim/.config/nvim/lua/gilhardl/plugins/lsp/mason.lua) - [mason.nvim](https://github.com/williamboman/mason.nvim) LSP/formatter/linter installer
-- [`plugins/lsp/lsp-config.lua`](nvim/.config/nvim/lua/gilhardl/plugins/lsp/lsp-config.lua) - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) LSP configurations (ts_ls, lua_ls, pyright, etc.) with keybindings (`gd`, `gr`, `<leader>ca`)
+- [`plugins/lsp-config.lua`](nvim/.config/nvim/lua/gilhardl/plugins/lsp-config.lua) - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig) and [mason.nvim](https://github.com/williamboman/mason.nvim) LSP configurations with installer (ts_ls, lua_ls, pyright, etc.) and keybindings (`gd`, `gr`, `<leader>ca`)
 - [`plugins/nvim-cmp.lua`](nvim/.config/nvim/lua/gilhardl/plugins/nvim-cmp.lua) - [nvim-cmp](https://github.com/hrsh7th/nvim-cmp) autocompletion with LSP, snippets, buffer, path sources
 
 #### Git Integration
