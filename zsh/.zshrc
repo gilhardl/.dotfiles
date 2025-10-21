@@ -1,3 +1,4 @@
+DOTFILES=$HOME/.dotfiles
 ZSH_HOME=$HOME/.zsh
 ZSH_CONFIG=$HOME/.config/zsh
 
