@@ -16,4 +16,4 @@ sed -i '' -e "s,http://github.com/gilhardl,$website,g" npm/.npmrc
 
 # Symlink dotfiles to home directory
 cd "$(dirname "$(readlink -f "$0")")"
-stow zsh && stow git && stow nvim && stow npm && stow ghostty
+stow zsh && stow git && stow tmux && stow nvim && stow npm && stow ghostty
