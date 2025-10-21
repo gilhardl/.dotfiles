@@ -32,6 +32,24 @@ Install dotfiles:
 
 ## What's Inside
 
+### Theme
+
+Modern theme inspired by [VSCode TokyoNight Theme](https://github.com/tokyo-night/tokyo-night-vscode-theme)
+
+- **light**: Light theme inspired by TokyoNight day color scheme
+  - [Ghostty](./ghostty/.config/ghostty/themes/light)
+  - [Tmux](./tmux/.tmux/themes/light)
+  - [NeoVim](./nvim/.config/nvim/lua/gilhardl/plugins/colorscheme.lua)
+
+  ![TokyoNight day theme screenshot](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
+
+- **dark**: Dark theme inspired by TokyoNight moon color scheme
+  - [Ghostty](./ghostty/.config/ghostty/themes/dark)
+  - [Tmux](./tmux/.tmux/themes/dark)
+  - [NeoVim](./nvim/.config/nvim/lua/gilhardl/plugins/colorscheme.lua)
+
+  ![TokyoNight moon theme screenshot](https://user-images.githubusercontent.com/292349/190951628-10ba28a1-57ff-4479-8eab-47400a402242.png)
+
 ### Ghostty
 
 - [`.config/ghostty/config`](ghostty/.config/ghostty/config) - Ghostty configuration

@@ -1,5 +1,5 @@
 shell-integration = zsh
 font-family = JetBrains Mono
-theme = dark:TokyoNight,light:TokyoNight Day
+theme = dark:dark,light:light
 mouse-hide-while-typing = true
 scrollback-limit = 1000000
