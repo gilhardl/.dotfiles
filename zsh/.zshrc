@@ -21,11 +21,14 @@ source $ZSH_CONFIG/syntax-highlight.zsh   # Syntax highlighting
 
 source $ZSH_CONFIG/git-commit.zsh         # Conventionnal commit helper
 
+# Cursor CLI
+export PATH=$PATH:$HOME/.local/bin
+
 # opencode
-export PATH=$PATH:/Users/gilhardl/.opencode/bin
+export PATH=$PATH:$HOME/.opencode/bin
 
 # LM Studio
-export PATH=$PATH:/Users/gilhardl/.lmstudio/bin
+export PATH=$PATH:$HOME/.lmstudio/bin
 
 # bun
 export BUN_INSTALL="$HOME/.bun"

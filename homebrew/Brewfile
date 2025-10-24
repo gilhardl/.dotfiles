@@ -1,0 +1,182 @@
+# Main Nerd font
+brew "font-jetbrains-mono-nerd-font"
+
+#######################
+# Programing
+#######################
+
+# Node.js
+brew "node@24"
+
+# Bun
+tap "oven-sh/bun"
+brew "bun"
+
+# Python
+brew "python@3"
+
+# Swift
+brew "swift"
+
+#######################
+# CLI tools
+#######################
+
+# Command-line fuzzy finder
+brew "fzf"
+
+# Better cd command
+brew "zoxide"
+
+# Search tool
+brew "ripgrep"
+
+# Symbolic links manager (for .dotfiles)
+brew "stow"
+
+# Display directories as trees
+brew "tree"
+
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
+
+# Download audio and video
+brew "yt-dlp"
+
+# Distributed revision control
+brew "git"
+
+# Git extension to work with large files
+brew "git-lfs"
+
+# Container engine
+brew "docker"
+
+# PostgreSQL object-relational database system
+brew "postgresql"
+
+# MongoDB document (noSQL) database system
+brew "mongosh"
+
+# SQLite client
+brew "sqlite"
+
+# Supabase (Backend As A Service) client
+tap "supabase/tap/supabase"
+brew "supabase"
+
+# Swift formatter
+brew "swift-format"
+
+# Python package manager
+brew "uv"
+
+#######################
+# TUI Applications
+#######################
+
+# Terminal multiplexer
+brew "tmux"
+
+# Extensible text editor
+brew "neovim"
+
+# AI coding assistant
+cask "claude-code"
+
+# Open AI coding assistant
+brew "opencode"
+
+# Simple TUI for Git
+brew "lazygit"
+
+# Interactive process viewer
+brew "htop"
+
+#######################
+# GUI Aplications
+#######################
+
+# Web browser
+cask "google-chrome"
+
+# Video player
+cask "vlc"
+
+# TV, movies, and series streaming and VOD
+mas "CANAL+", id: 694580816
+
+# Messaging
+mas "WhatsApp Messenger", id: 310633997
+
+# Voice and text chat software
+cask "discord"
+
+# Assistant AI
+cask "claude"
+
+# Assistant AI
+cask "chatgpt"
+
+# Research AI
+mas "Perplexity: Ask Anything", id: 6714467650
+
+# Modern and cross-platform terminal emulator
+cask "ghostty"
+
+# Git repositories
+cask "github"
+
+# HTTP client
+cask "postman"
+
+# General code editor
+cask "visual-studio-code"
+
+# iOS and macOS IDE
+mas "Xcode", id: 497799835
+
+# Swift Playgrounds
+mas "Swift Playgrounds", id: 1496833156
+
+# Apple SF Symbols
+cask "sf-symbols"
+
+# iOS and macOS developers documentation
+mas "Apple Developer", id: 640199958
+
+# Docker dashboard
+cask "docker-desktop"
+
+# Virtual machines management
+cask "utm"
+
+# Design editor
+cask "figma"
+
+# Vectorial images editor
+mas "Affinity Designer 2", id: 1616831348
+
+# Stockmarket analysis
+cask "tradingview"
+
+# Torrents client
+cask "transmission"
+
+# Darknet browser
+cask "tor-browser"
+
+# Public VPN
+mas "NordVPN : VPN ultra-rapide", id: 905953485
+
+# Password manager
+mas "Bitwarden", id: 1137397744 # TODO: remove
+
+# macOS maintenance utility
+cask "onyx"
+
+# Mouse forward/backward utility
+cask "sanesidebuttons"
+
+# Mouse scroll utility
+cask "scroll-reverser"
