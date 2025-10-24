@@ -1,14 +1,7 @@
 #!/bin/bash
 
-# Check if Homebrew is installed
-if ! command -v brew &> /dev/null; then
-  echo "Homebrew not found. Installing Homebrew..."
-  /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-fi
-
-# Install Homebrew packages
-echo "Installing Homebrew packages..."
-brew update && brew bundle install --cleanup --file=~/.dotfiles/homebrew/Brewfile && brew upgrade
+# Install Homebrew and packages
+source ~/.dotfiles/homebrew/install.sh
 
 # Check for customize flag
 if [[ "$1" == "-c" || "$1" == "--customize" ]]; then
@@ -31,3 +24,6 @@ fi
 echo "Symlinking dotfiles to home directory..."
 cd "$(dirname "$(readlink -f "$0")")"
 stow zsh && stow git && stow tmux && stow nvim && stow npm && stow ghostty
+
+# Install VSCode settings and extensions
+source ~/.dotfiles/vscode/install.sh

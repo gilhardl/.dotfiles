@@ -1,0 +1,164 @@
+{
+  // FILES
+  "files.dialog.defaultPath": "/Users/gilhardl/Code",
+  "files.autoSave": "onFocusChange",
+  "files.insertFinalNewline": true,
+  // WINDOW
+  "window.commandCenter": true,
+  "window.confirmBeforeClose": "keyboardOnly",
+  "window.restoreWindows": "none",
+  "window.autoDetectColorScheme": true,
+  "window.title": "${rootName}",
+  "window.titleBarStyle": "custom",
+  // WORKBENCH
+  "workbench.colorTheme": "Tokyo Night Storm",
+  "workbench.preferredDarkColorTheme": "Tokyo Night Storm",
+  "workbench.preferredLightColorTheme": "Tokyo Night Light",
+  "workbench.iconTheme": "vs-seti",
+  "workbench.productIconTheme": "Default",
+  "workbench.activityBar.location": "top",
+  "workbench.editor.pinnedTabSizing": "compact",
+  "workbench.editor.highlightModifiedTabs": true,
+  "workbench.tree.enableStickyScroll": true,
+  "workbench.tree.stickyScrollMaxItemCount": 5,
+  // EXPLORER
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    ".env": "*.env, .env.*, .envrc, env.d.ts",
+    ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .git-blame*, commitlint*, .editorconfig",
+    "readme*": "authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*",
+    "package.json": "package-lock.json, yarn*, pnpm*, bun*, .npm*, .yarn*, .pnpm*",
+    "nuxt.config.*": "env.d.ts, tsconfig.*, eslint.config*, uno.config.*, vitest.config.*, content.config.*, nuxt.schema.*, drizzle.config.*",
+    "app.config.*": "pwa.config.*",
+    "vite.config.*": "env.d.ts, tsconfig.*, eslint.config*, uno.config.*, vitest.config.*",
+    "vue.config.*": "env.d.ts, tsconfig.*, eslint.config*, uno.config.*, vitest.config.*",
+    "tsconfig.*": "env.d.ts, eslint.config*, uno.config.*, vitest.config.*, .prettier*",
+    "Dockerfile": ".dockerignore"
+  },
+  // SEARCH
+  "search.exclude": {
+    "**/.git": true,
+    "**/.nuxt": true,
+    "**/.output": true,
+    "**/.pnpm": true,
+    "**/.pnpm-store": true,
+    "**/.yarn": true,
+    "**/node_modules": true,
+    "**/package-lock.json": true,
+    "**/pnpm-lock.yaml": true,
+    "**/yarn.lock": true,
+    "**/dist/**": true,
+    "**/out/**": true,
+    "**/logs": true,
+    "**/temp": true
+  },
+  // DEBUG
+  "debug.toolBarLocation": "docked",
+  // EDITOR BREADCRUMBS
+  "breadcrumbs.symbolPath": "last",
+  // EDITOR
+  "editor.gotoLocation.multipleDefinitions": "goto",
+  "editor.accessibilitySupport": "off",
+  "editor.linkedEditing": true,
+  "editor.minimap.enabled": false,
+  "editor.stickyScroll.enabled": true,
+  "editor.stickyScroll.maxLineCount": 5,
+  "editor.detectIndentation": false,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "explorer.confirmPasteNative": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  // EMMET SUGGESTIONS
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": false,
+  // TEST
+  "testing.automaticallyOpenPeekView": "failureAnywhere",
+  // TERMINAL
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  "terminal.integrated.profiles.osx": {
+    "zsh": {
+      "path": "/bin/zsh",
+      "args": ["-l", "-i"]
+    }
+  },
+  "terminal.integrated.allowedLinkSchemes": [
+    "file",
+    "http",
+    "https",
+    "mailto",
+    "vscode",
+    "vscode-insiders",
+    "docker-desktop"
+  ],
+  // GIT
+  "git.autofetch": true,
+  "git.confirmSync": false,
+  "git.enableSmartCommit": true,
+  "git.useCommitInputAsStashMessage": true,
+  "git.useEditorAsCommitInput": false,
+  "git.ignoreRebaseWarning": true,
+  "git.replaceTagsWhenPull": true,
+  // LANGUAGES FEATURES
+  "javascript.updateImportsOnFileMove.enabled": "never",
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  // EXTENSIONS
+  // GITHUB
+  "githubIssues.issueBranchTitle": "fix/${issueNumber}",
+  // GITHUB COPILOT
+  "github.copilot.enable": {
+    "*": true,
+    "plaintext": true,
+    "markdown": true,
+    "scminput": true
+  },
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.advanced": {
+    "useLanguageServer": true
+  },
+  "github.copilot.chat.agent.thinkingTool": true,
+  "github.copilot.chat.edits.temporalContext.enabled": true,
+  "github.copilot.chat.editor.temporalContext.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.alternateGptPrompt.enabled": true,
+  "github.copilot.chat.languageContext.fix.typescript.enabled": true,
+  "github.copilot.chat.languageContext.inline.typescript.enabled": true,
+  "github.copilot.chat.languageContext.typescript.enabled": true,
+  "github.copilot.chat.newWorkspace.useContext7": true,
+  "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
+  "github.copilot.chat.notebook.followCellExecution.enabled": true,
+  // COPILOT CHAT
+  "chat.agent.maxRequests": 50,
+  "chat.mcp.gallery.enabled": true,
+  "chat.tools.terminal.autoApprove": {
+    "test": true,
+    "find": true,
+    "grep": true,
+    "bun": true
+  },
+  // Error Lens
+  "errorLens.enabledDiagnosticLevels": ["warning", "error"],
+  "errorLens.excludeBySource": ["eslint"],
+  // ESLint
+  "eslint.codeAction.showDocumentation": {
+    "enable": true
+  },
+  "eslint.validate": [
+    "javascript",
+    "typescript",
+    "vue",
+    "html",
+    "markdown",
+    "json",
+    "jsonc",
+    "yaml",
+    "toml"
+  ],
+  // REDHAT
+  "redhat.telemetry.enabled": false
+}
