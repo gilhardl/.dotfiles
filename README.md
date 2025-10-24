@@ -19,6 +19,7 @@ Personal development environment configuration for macOS featuring a modern, coh
 - **ZSH** - Enhanced shell with plugins and completions
 - **Git** - Version control with custom configuration
 - **NPM** - Node.js package manager settings
+- **VSCode** - Visual Studio Code with synchronized settings, keybindings, and extensions
 - **NeoVim** - Highly-customized text editor with 25+ plugins
 
 ## Requirements
@@ -36,24 +37,15 @@ git clone --recurse-submodules https://github.com/gilhardl/dotfiles.git ~/.dotfi
 Install dotfiles:
 
 ```sh
-cd ~/.dotfiles && ./install.sh
+cd ~/.dotfiles && ./install.sh [-c|--customize]
 ```
 
 The install script will:
 
-1. Check for Homebrew and install it if not present
-2. Install all packages from the Brewfile
-3. Symlink dotfiles to your home directory
-
-### Customization
-
-To customize Git and NPM configurations with your personal information, run:
-
-```sh
-cd ~/.dotfiles && ./install.sh --customize
-```
-
-This will prompt for your name, email, and website to personalize the configuration files.
+1. (Optional) Will prompt for your name, email, and website to personalize Git and NPM configuration files if run with `-c` or `--customize`.
+2. Install Homebrew and packages (via [homebrew/install.sh](homebrew/install.sh))
+3. Symlink dotfiles to your home directory using GNU Stow
+4. Configure VSCode settings, keybindings, and extensions (via [vscode/install.sh](vscode/install.sh))
 
 ## What's Inside
 
@@ -153,6 +145,7 @@ The [Brewfile](homebrew/Brewfile) installs the following packages via Homebrew:
 Modern theme inspired by [VSCode TokyoNight Theme](https://github.com/tokyo-night/tokyo-night-vscode-theme)
 
 - **light**: Light theme inspired by TokyoNight day color scheme
+
   - [Ghostty](./ghostty/.config/ghostty/themes/light)
   - [Tmux](./tmux/.tmux/themes/light)
   - [NeoVim](./nvim/.config/nvim/lua/gilhardl/plugins/colorscheme.lua)
@@ -160,6 +153,7 @@ Modern theme inspired by [VSCode TokyoNight Theme](https://github.com/tokyo-nigh
   ![TokyoNight day theme screenshot](https://user-images.githubusercontent.com/292349/115996270-78c6c480-a593-11eb-8ed0-7d1400b058f5.png)
 
 - **dark**: Dark theme inspired by TokyoNight moon color scheme
+
   - [Ghostty](./ghostty/.config/ghostty/themes/dark)
   - [Tmux](./tmux/.tmux/themes/dark)
   - [NeoVim](./nvim/.config/nvim/lua/gilhardl/plugins/colorscheme.lua)
@@ -225,6 +219,20 @@ Git submodules located in `.config/zsh/plugins/`:
 #### NPM
 
 - [`.npmrc`](npm/.npmrc) - NPM configuration
+
+#### VSCode
+
+**Configuration Files**
+
+- [`.config/vscode/settings.jsonc`](vscode/settings.jsonc) - Editor settings and preferences
+- [`.config/vscode/keybindings.jsonc`](vscode/keybindings.jsonc) - Custom keyboard shortcuts
+- [`.config/vscode/extensions.jsonc`](vscode/extensions.jsonc) - List of installed extensions
+
+**Installation Script**
+
+- [`vscode/install.sh`](vscode/install.sh) - Automated setup that:
+  - Symlinks `settings.jsonc` and `keybindings.jsonc` to VSCode User directory
+  - Installs all extensions from `extensions.jsonc`
 
 #### NeoVim
 

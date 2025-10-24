@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# Install Homebrew and packages
-source ~/.dotfiles/homebrew/install.sh
-
 # Check for customize flag
 if [[ "$1" == "-c" || "$1" == "--customize" ]]; then
   # Ask for user information
@@ -19,6 +16,9 @@ if [[ "$1" == "-c" || "$1" == "--customize" ]]; then
   sed -i '' -e "s/lucas@gilhard.fr/$email/g" npm/.npmrc
   sed -i '' -e "s,http://github.com/gilhardl,$website,g" npm/.npmrc
 fi
+
+# Install Homebrew and packages
+source ~/.dotfiles/homebrew/install.sh
 
 # Symlink dotfiles to home directory
 echo "Symlinking dotfiles to home directory..."
