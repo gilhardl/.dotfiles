@@ -20,6 +20,8 @@ return {
       autotag = {
         enable = true,
       },
+      -- automatically install parsers for new filetypes
+      auto_install = true,
       -- ensure these language parsers are installed
       ensure_installed = {
         "markdown",
