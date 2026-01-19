@@ -1,5 +1,5 @@
 # Main Nerd font
-brew "font-jetbrains-mono-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
 
 #######################
 # Programing
@@ -58,7 +58,6 @@ brew "mongosh"
 brew "sqlite"
 
 # Supabase (Backend As A Service) client
-tap "supabase/tap/supabase"
 brew "supabase"
 
 # Swift formatter
@@ -149,9 +148,6 @@ cask "utm"
 
 # Design editor
 cask "figma"
-
-# Vectorial images editor
-mas "Affinity Designer 2", id: 1616831348
 
 # Stockmarket analysis
 cask "tradingview"
