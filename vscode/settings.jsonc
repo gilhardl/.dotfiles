@@ -29,7 +29,7 @@
   "explorer.fileNesting.patterns": {
     ".env": "*.env, .env.*, .envrc, env.d.ts",
     ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .git-blame*, commitlint*, .editorconfig",
-    "readme*": "authors, backers*, changelog*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors*",
+    "readme*": " architecture.md, authors, backers*, citation*, code_of_conduct*, codeowners, contributing*, contributors, copying, credits, governance.md, history.md, license*, maintainers*, readme*, security.md, sponsors*, troubleshooting.md, *_guide.md",
     "package.json": "package-lock.json, yarn*, pnpm*, bun*, .npm*, .yarn*, .pnpm*",
     "nuxt.config.*": "env.d.ts, tsconfig.*, eslint.config*, uno.config.*, vitest.config.*, content.config.*, nuxt.schema.*, drizzle.config.*",
     "app.config.*": "pwa.config.*",
@@ -60,6 +60,8 @@
   // EDITOR BREADCRUMBS
   "breadcrumbs.symbolPath": "last",
   // EDITOR
+  "editor.fontFamily": "'JetBrainsMono NF', 'Menlo', 'Monaco', 'Courier New', monospace",
+  "editor.fontLigatures": true,
   "editor.gotoLocation.multipleDefinitions": "goto",
   "editor.accessibilitySupport": "off",
   "editor.linkedEditing": true,
@@ -108,9 +110,13 @@
   "javascript.updateImportsOnFileMove.enabled": "never",
   "typescript.updateImportsOnFileMove.enabled": "never",
   // EXTENSIONS
+  // CLAUDE
+  "claudeCode.allowDangerouslySkipPermissions": true,
+  "claudeCode.selectedModel": "sonnet",
+  "claudeCode.preferredLocation": "panel",
   // GITHUB
   "githubIssues.issueBranchTitle": "fix/${issueNumber}",
-  // GITHUB COPILOT
+  // COPILOT
   "github.copilot.enable": {
     "*": true,
     "plaintext": true,
@@ -132,14 +138,15 @@
   "github.copilot.chat.newWorkspace.useContext7": true,
   "github.copilot.chat.notebook.enhancedNextEditSuggestions.enabled": true,
   "github.copilot.chat.notebook.followCellExecution.enabled": true,
-  // COPILOT CHAT
   "chat.agent.maxRequests": 50,
+  "chat.useAgentSkills": true,
+  "chat.useNestedAgentsMdFiles": true,
+  "chat.viewSessions.orientation": "stacked",
   "chat.mcp.gallery.enabled": true,
   "chat.tools.terminal.autoApprove": {
     "test": true,
     "find": true,
-    "grep": true,
-    "bun": true
+    "grep": true
   },
   // Error Lens
   "errorLens.enabledDiagnosticLevels": ["warning", "error"],
