@@ -29,11 +29,3 @@ export PATH=$PATH:$HOME/.opencode/bin
 
 # LM Studio
 export PATH=$PATH:$HOME/.lmstudio/bin
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-# bun completions
-[ -s "/Users/gilhardl/.bun/_bun" ] && source "/Users/gilhardl/.bun/_bun"
-

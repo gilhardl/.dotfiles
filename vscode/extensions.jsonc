@@ -113,14 +113,6 @@
   },
   {
     "identifier": {
-      "id": "oven.bun-vscode",
-      "uuid": "2c58c6a8-c23c-4913-899e-17c90b15274e"
-    },
-    "displayName": "Bun for Visual Studio Code",
-    "applicationScoped": true
-  },
-  {
-    "identifier": {
       "id": "redhat.vscode-xml",
       "uuid": "6703768d-d42f-474e-9f6e-5f288d53f6e8"
     },

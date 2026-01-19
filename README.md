@@ -10,7 +10,7 @@ Personal development environment configuration for macOS featuring a modern, coh
 - Fully-configured Neovim with LSP, autocompletion, formatting, and Git integration
 - Persistent Tmux sessions with seamless Vim navigation
 - Conventional commit helpers and development tools pre-configured
-- Pre-configured runtimes (Node.js, Python, Bun, Swift) and databases (PostgreSQL, MongoDB, SQLite)
+- Pre-configured runtimes (Node.js, Python, Swift) and databases (PostgreSQL, MongoDB, SQLite)
 
 **Configured Tools:**
 
@@ -56,7 +56,6 @@ The [Brewfile](homebrew/Brewfile) installs the following packages via Homebrew:
 #### Programming Languages & Runtimes
 
 - **Node.js** (`node@24`) - JavaScript runtime
-- **Bun** - Fast JavaScript runtime and package manager
 - **Python** (`python@3`) - Python interpreter
 - **Swift** - Apple's programming language
 

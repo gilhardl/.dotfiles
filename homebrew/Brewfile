@@ -8,10 +8,6 @@ brew "font-jetbrains-mono-nerd-font"
 # Node.js
 brew "node@24"
 
-# Bun
-tap "oven-sh/bun"
-brew "bun"
-
 # Python
 brew "python@3"
 
