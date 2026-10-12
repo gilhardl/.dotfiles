@@ -20,5 +20,5 @@ source ~/.dotfiles/homebrew/install.sh
 # Symlink dotfiles to home directory
 echo "Symlinking dotfiles to home directory..."
 cd "$(dirname "$(readlink -f "$0")")"
-stow zsh && stow git && stow tmux && stow nvim
+stow zsh && stow git
 
