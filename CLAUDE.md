@@ -1,158 +1,32 @@
 # CLAUDE.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+Personal macOS dotfiles of one person, symlinked into `$HOME` with GNU Stow. Public repository on GitHub. The README is the reference for the layout, the conventions and what was removed (and why); read it before changing anything.
 
-## Repository Overview
+## Rules
 
-Personal macOS dotfiles repository using GNU Stow for symlink management. Configurations for Ghostty terminal, Tmux, ZSH, Git, NPM, VSCode, and Neovim with unified TokyoNight theme across all tools.
+- No secrets, ever: the repository is public. Tokens and machine-specific values live in the local, untracked files (`~/.npmrc`, `~/.gitconfig`, `~/.zprofile`, `~/.zshrc`).
+- Installers and tools write to the local files, never to a tracked one. A tracked file that changes on its own is a bug: find what wrote it and route it to a local file.
+- Nothing in the interactive setup may reach Claude Code's shell: `zsh/.config/zsh/zshrc.zsh` returns early when `CLAUDECODE` is set; keep every alias, function, hook or plugin below that line, and keep `zprofile.zsh` to environment variables.
+- No git submodules: ZSH plugins come from Homebrew.
+- The Brewfile describes the machine: one line per package, under its group, with a comment. `install.sh` never uninstalls.
+- A removal goes in the README's "Removed" table, dated, with its reason.
+- Conventional commits (`type(scope): subject`), no `Co-Authored-By` and no agent attribution.
 
-## Validation
+## Layout
 
-No build/test/lint commands - this is a configuration repository. Validate by symlinking with `stow`.
+- `homebrew/Brewfile`, `homebrew/install.sh`: packages and applications.
+- `zsh/.config/zsh/` -> `~/.config/zsh/`: `zprofile.zsh` (login environment), `zshrc.zsh` (interactive entry point) and the modules it sources.
+- `git/.config/git/` -> `~/.config/git/`: `config` and `ignore`.
+- `install.sh`: Homebrew, `stow zsh git`, then the local entry files when missing.
 
-## Installation & Deployment
+## Verification
 
-### Initial Setup
-```bash
-# Clone with submodules (required for ZSH and Tmux plugins)
-git clone --recurse-submodules https://github.com/gilhardl/dotfiles.git ~/.dotfiles
-
-# Install everything
-cd ~/.dotfiles && ./install.sh
-
-# Install with customization (prompts for name, email, website)
-cd ~/.dotfiles && ./install.sh --customize
+```sh
+zsh -n zsh/.config/zsh/*.zsh                                # syntax
+for i in 1 2 3; do env -u CLAUDECODE /usr/bin/time -p zsh -l -i -c exit; done   # startup, about 0.08 s on 2026-10-12
+zsh -l -i -c 'alias; whence -w _prompt_precmd'              # with CLAUDECODE set: no alias from here, no prompt function
+stow -n -v zsh git                                          # no conflict
+brew bundle check --file=homebrew/Brewfile                  # the machine has everything
+brew bundle cleanup --file=homebrew/Brewfile                # lists what the Brewfile lacks, uninstalls nothing
+git status                                                  # clean after opening a new shell
 ```
-
-### Individual Component Installation
-```bash
-# Install Homebrew packages only
-source ~/.dotfiles/homebrew/install.sh
-
-# Symlink specific tool configs (from repo root)
-stow zsh          # ZSH configuration
-stow git          # Git configuration
-stow tmux         # Tmux configuration
-stow nvim         # Neovim configuration
-stow npm          # NPM configuration
-stow ghostty      # Ghostty terminal configuration
-
-# Install VSCode settings and extensions
-source ~/.dotfiles/vscode/install.sh
-```
-
-### Update Homebrew Packages
-```bash
-brew update && brew bundle install --cleanup --file=~/.dotfiles/homebrew/Brewfile && brew upgrade
-```
-
-## Architecture
-
-### Stow Directory Structure
-Each tool has its own directory containing the dotfile structure to be symlinked to `$HOME`:
-- `ghostty/` -> `~/.config/ghostty/`
-- `git/` -> `~/.gitconfig`
-- `npm/` -> `~/.npmrc`
-- `nvim/` -> `~/.config/nvim/`
-- `tmux/` -> `~/.tmux/` and `~/.tmux.conf`
-- `zsh/` -> `~/.zprofile`, `~/.zshrc`, `~/.config/zsh/`
-- `vscode/` -> Handled by install.sh (symlinks to `~/Library/Application Support/Code/User/`)
-
-**Important**: When adding new config files, place them in the appropriate tool directory with the full path structure as it should appear in `$HOME`.
-
-### Git Submodules
-ZSH and Tmux plugins are managed as git submodules:
-- ZSH plugins: `zsh/.config/zsh/plugins/` (fast-syntax-highlighting, zen.zsh, zsh-autosuggestions, zsh-completions)
-- Tmux plugins: `tmux/.tmux/plugins/` (tpm, tmux-themepack, vim-tmux-navigator, tmux-resurrect, tmux-continuum)
-
-When updating submodules:
-```bash
-git submodule update --remote --merge
-```
-
-### Neovim Configuration Architecture
-Uses [lazy.nvim](https://github.com/folke/lazy.nvim) plugin manager with a modular structure:
-
-**Entry Point**: `nvim/.config/nvim/init.lua` loads lazy.nvim and core modules
-
-**Core Configuration** (`lua/gilhardl/core/`):
-- `options.lua` - Vim settings (line numbers, indentation, search behavior)
-- `keymaps.lua` - Core keybindings (splits, tabs, navigation)
-
-**Plugins** (`lua/gilhardl/plugins/`):
-- Each plugin has its own file returning a lazy.nvim spec table
-- Plugin configs include priority, dependencies, config functions, and keybindings
-- Use `vim.opt`, `vim.keymap.set()`, `vim.g` for configuration
-- Keymaps must include `desc` field for which-key integration
-
-**Adding New Plugins**:
-1. Create new file in `lua/gilhardl/plugins/plugin-name.lua`
-2. Return lazy.nvim spec table with plugin URL and config
-3. Lazy.nvim auto-loads all files in plugins directory
-
-### ZSH Configuration Architecture
-Main config file `.zshrc` sources modular configuration files from `.config/zsh/`:
-- `history.zsh` - History settings
-- `homebrew.zsh` - Homebrew initialization
-- `fzf.zsh`, `zoxide.zsh` - Tool integrations
-- `prompt.zsh` - zen.zsh prompt theme
-- `alias.zsh`, `alias-finder.zsh` - Aliases and suggestions
-- `completions.zsh`, `auto-suggestions.zsh`, `syntax-highlight.zsh` - Shell enhancements
-- `git-commit.zsh` - Conventional commit helpers (git aliases: feat, fix, chore, docs, etc.)
-
-### Theme System
-TokyoNight theme variants are configured across tools:
-- **Light theme**: TokyoNight Day (files in `ghostty/.config/ghostty/themes/light`, `tmux/.tmux/themes/light`)
-- **Dark theme**: TokyoNight Storm (files in `ghostty/.config/ghostty/themes/dark`, `tmux/.tmux/themes/dark`)
-- Neovim: `plugins/colorscheme.lua` with `auto-dark-mode.lua` for automatic switching
-
-## Code Style Guidelines
-
-### Lua (Neovim)
-- 2 spaces indentation (tabs expanded to spaces)
-- Double quotes for strings
-- Descriptive comments aligned with code
-- Use modern vim APIs: `vim.opt`, `vim.keymap.set()`, `vim.g`
-- Plugin config structure:
-  ```lua
-  return {
-    "author/plugin",
-    priority = 1000,  -- if needed
-    dependencies = { "dependency/plugin" },
-    config = function()
-      -- Plugin setup
-    end,
-  }
-  ```
-
-### Shell Scripts
-- Follow existing `.zshrc` modular structure with commented sections
-- Use `source <()` for command substitution with external tools
-- Bash scripts use `#!/bin/bash` shebang
-
-### Configuration Files
-- Git: Key=value pairs under `[section]` headers
-- Ghostty: `key = value` format
-- NPM: Standard `.npmrc` format
-- VSCode: JSONC format with comments
-
-## Personalization
-
-When using `--customize` flag, the install script replaces:
-- Git config: Name and email in `git/.gitconfig`
-- NPM config: Name, email, and website in `npm/.npmrc`
-
-Default values to replace:
-- Name: "Lucas GILHARD"
-- Email: "lucas@gilhard.fr"
-- Website: "http://github.com/gilhardl"
-
-## Key Neovim Keybindings Reference
-
-File explorer: `<leader>ee` (nvim-tree)
-Fuzzy find files: `<leader>ff` (telescope)
-Search text: `<leader>fs` (telescope)
-Git UI: `<leader>lg` (lazygit)
-Format file: `<leader>mp` (conform.nvim)
-Toggle split maximize: `<leader>sm` (vim-maximizer)
-LSP actions: `gd` (definition), `gr` (references), `<leader>ca` (code action)
