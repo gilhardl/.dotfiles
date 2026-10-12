@@ -1,5 +1,7 @@
-# Main Nerd font
+# Fonts
 cask "font-jetbrains-mono-nerd-font"
+cask "font-sf-mono"
+cask "font-sf-mono-nerd-font-ligaturized"
 
 #######################
 # Programing
@@ -11,18 +13,40 @@ brew "node@24"
 # Python
 brew "python@3"
 
+# Python package manager
+brew "uv"
+
 # Swift
 brew "swift"
+
+# Swift formatters
+brew "swift-format"
+brew "swiftformat"
+
+# Nix formatter
+brew "nixfmt"
 
 #######################
 # CLI tools
 #######################
 
+# Distributed revision control
+brew "git"
+
+# Git extension to work with large files
+brew "git-lfs"
+
+# Rewrite git history
+brew "git-filter-repo"
+
+# GitHub CLI
+brew "gh"
+
+# Mac App Store CLI (for the mas entries below)
+brew "mas"
+
 # Command-line fuzzy finder
 brew "fzf"
-
-# Better cd command
-brew "zoxide"
 
 # Search tool
 brew "ripgrep"
@@ -33,25 +57,22 @@ brew "stow"
 # Display directories as trees
 brew "tree"
 
+# Interactive process viewer
+brew "htop"
+
 # Play, record, convert, and stream audio and video
 brew "ffmpeg"
 
 # Download audio and video
 brew "yt-dlp"
 
-# Distributed revision control
-brew "git"
-
-# Git extension to work with large files
-brew "git-lfs"
-
 # Container engine
 brew "docker"
 
 # PostgreSQL object-relational database system
-brew "postgresql"
+brew "postgresql@14"
 
-# MongoDB document (noSQL) database system
+# MongoDB shell
 brew "mongosh"
 
 # SQLite client
@@ -60,70 +81,35 @@ brew "sqlite"
 # Supabase (Backend As A Service) client
 brew "supabase"
 
-# Swift formatter
-brew "swift-format"
+# Xcode build output formatter
+brew "xcbeautify"
 
-# Python package manager
-brew "uv"
-
-#######################
-# TUI Applications
-#######################
-
-# Terminal multiplexer
-brew "tmux"
-
-# Extensible text editor
-brew "neovim"
-
-# AI coding assistant
-cask "claude-code"
-
-# Open AI coding assistant
-brew "opencode"
-
-# Simple TUI for Git
-brew "lazygit"
-
-# Interactive process viewer
-brew "htop"
+# Xcode projects for SourceKit-LSP
+brew "xcode-build-server"
 
 #######################
-# GUI Aplications
+# Shell
 #######################
 
-# Web browser
-cask "google-chrome"
+# Suggestions from history
+brew "zsh-autosuggestions"
 
-# Video player
-cask "vlc"
+# Syntax highlighting
+brew "zsh-fast-syntax-highlighting"
 
-# TV, movies, and series streaming and VOD
-mas "CANAL+", id: 694580816
-
-# Messaging
-mas "WhatsApp Messenger", id: 310633997
-
-# Voice and text chat software
-cask "discord"
+#######################
+# AI
+#######################
 
 # Assistant AI
 cask "claude"
 
-# Assistant AI
-cask "chatgpt"
+# AI coding assistant
+cask "claude-code"
 
-# Research AI
-mas "Perplexity: Ask Anything", id: 6714467650
-
-# Modern and cross-platform terminal emulator
-cask "ghostty"
-
-# Git repositories
-cask "github"
-
-# HTTP client
-cask "postman"
+#######################
+# Development
+#######################
 
 # General code editor
 cask "visual-studio-code"
@@ -132,22 +118,97 @@ cask "visual-studio-code"
 mas "Xcode", id: 497799835
 
 # Swift Playgrounds
-mas "Swift Playgrounds", id: 1496833156
+mas "Swift Playground", id: 1496833156
+
+# iOS and macOS developers documentation
+mas "Developer", id: 640199958
 
 # Apple SF Symbols
 cask "sf-symbols"
 
-# iOS and macOS developers documentation
-mas "Apple Developer", id: 640199958
+# Git repositories
+cask "github"
+
+# HTTP client
+cask "bruno"
 
 # Docker dashboard
 cask "docker-desktop"
 
-# Virtual machines management
-cask "utm"
-
 # Design editor
 cask "figma"
+
+#######################
+# Virtualization and remote
+#######################
+
+# Virtual machines
+cask "parallels"
+
+# Windows apps without Windows
+cask "crossover"
+
+# Cloud PC
+cask "shadow"
+
+# Remote desktop
+cask "anydesk"
+
+#######################
+# Browsers
+#######################
+
+cask "google-chrome"
+cask "brave-browser"
+cask "tor-browser"
+
+#######################
+# Office
+#######################
+
+mas "Keynote", id: 361285480
+mas "Numbers", id: 361304891
+mas "Pages", id: 361309726
+cask "microsoft-word"
+cask "microsoft-excel"
+cask "microsoft-powerpoint"
+cask "onedrive"
+
+#######################
+# Communication
+#######################
+
+# Messaging
+mas "WhatsApp Messenger", id: 310633997
+
+# Voice and text chat software
+cask "discord"
+
+#######################
+# Media
+#######################
+
+# Video player
+cask "vlc"
+
+# Video transcoder
+cask "handbrake-app"
+
+# TV, movies, and series streaming and VOD
+mas "CANAL+", id: 694580816
+
+# Game
+mas "Asphalt", id: 1491129197
+
+#######################
+# Utilities
+#######################
+
+# Password manager
+cask "bitwarden"
+
+# Public VPN
+mas "NordVPN : VPN ultra-rapide", id: 905953485
 
 # Stockmarket analysis
 cask "tradingview"
@@ -155,17 +216,11 @@ cask "tradingview"
 # Torrents client
 cask "transmission"
 
-# Darknet browser
-cask "tor-browser"
-
-# Public VPN
-mas "NordVPN : VPN ultra-rapide", id: 905953485
-
-# Password manager
-mas "Bitwarden", id: 1137397744 # TODO: remove
-
 # macOS maintenance utility
 cask "onyx"
+
+# Quick Look syntax highlighting for source files
+cask "syntax-highlight"
 
 # Mouse forward/backward utility
 cask "sanesidebuttons"

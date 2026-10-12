@@ -7,8 +7,8 @@ if ! command -v brew &> /dev/null; then
 fi
 
 # Load Homebrew shell environment
-eval "$(/opt/homebrew/bin/brew shellenv zsh)"
+eval "$(/opt/homebrew/bin/brew shellenv bash)"
 
-# Install Homebrew packages
+# Install Homebrew packages; nothing is uninstalled (run `brew bundle cleanup` to list what the Brewfile lacks)
 echo "Installing Homebrew packages..."
-brew update && brew bundle install --cleanup --file=~/.dotfiles/homebrew/Brewfile && brew upgrade
+brew update && brew bundle install --file="$(dirname "${BASH_SOURCE[0]}")/Brewfile" && brew upgrade
