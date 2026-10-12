@@ -67,6 +67,9 @@ The Claude Code configuration (global `CLAUDE.md`, `settings.json`, personal ski
 | 2026-10-12 | VS Code settings, key bindings and extensions | VS Code Settings Sync already syncs them; the symlinks conflicted with it |
 | 2026-10-12 | NPM config | holds a registry token; the `init-*` defaults were not worth tracking |
 | 2026-10-12 | opencode, LM Studio, Antigravity, Cursor CLI | Claude Code is the only coding agent in use |
+| 2026-10-12 | `docker` formula | Docker Desktop ships the CLI; the formula could not be linked over it |
+| 2026-10-12 | `python@3` formula | `uv` manages Python versions; Homebrew keeps the Python its formulae depend on |
+| 2026-10-12 | `nixfmt` and the nix-darwin marker in `/opt/homebrew` | left over from a nix-darwin trial, uninstalled |
 | 2026-10-12 | ZSH plugins as git submodules (zen.zsh, zsh-completions…) | plugins come from Homebrew; zsh-completions was dead code without `compinit` |
 
 ## License

@@ -10,10 +10,7 @@ cask "font-sf-mono-nerd-font-ligaturized"
 # Node.js
 brew "node@24"
 
-# Python
-brew "python@3"
-
-# Python package manager
+# Python versions and packages
 brew "uv"
 
 # Swift
@@ -22,9 +19,6 @@ brew "swift"
 # Swift formatters
 brew "swift-format"
 brew "swiftformat"
-
-# Nix formatter
-brew "nixfmt"
 
 #######################
 # CLI tools
@@ -65,9 +59,6 @@ brew "ffmpeg"
 
 # Download audio and video
 brew "yt-dlp"
-
-# Container engine
-brew "docker"
 
 # PostgreSQL object-relational database system
 brew "postgresql@14"
@@ -132,7 +123,7 @@ cask "github"
 # HTTP client
 cask "bruno"
 
-# Docker dashboard
+# Docker engine, CLI and dashboard
 cask "docker-desktop"
 
 # Design editor
