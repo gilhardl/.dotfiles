@@ -22,5 +22,3 @@ echo "Symlinking dotfiles to home directory..."
 cd "$(dirname "$(readlink -f "$0")")"
 stow zsh && stow git && stow tmux && stow nvim
 
-# Install VSCode settings and extensions
-source ~/.dotfiles/vscode/install.sh
