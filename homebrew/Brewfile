@@ -181,9 +181,6 @@ cask "handbrake-app"
 # TV, movies, and series streaming and VOD
 mas "CANAL+", id: 694580816
 
-# Game
-mas "Asphalt", id: 1491129197
-
 #######################
 # Utilities
 #######################
