@@ -42,7 +42,7 @@ The interactive shell loads, in this order:
 - **Installers write to local files, never to the repository.** `~/.zprofile`, `~/.zshrc` and `~/.gitconfig` are untracked files: the first two only source the tracked config, and the lines installers append (Docker Desktop, `git lfs install`…) stay there, in plain sight. `git config --global` writes to `~/.gitconfig`, which Git reads after `~/.config/git/config`.
 - **No secrets.** The repository is public. `~/.npmrc`, which holds a registry token, is a local file.
 - **Claude Code gets the environment, not the interactive setup.** `zshrc.zsh` returns early when `CLAUDECODE` is set: the shell of Claude Code's Bash tool keeps `PATH` and the variables, without aliases, functions or plugins.
-- **The Brewfile describes the machine.** After installing or removing something, update the Brewfile; `brew bundle cleanup --file=~/.dotfiles/homebrew/Brewfile` lists what it lacks, without uninstalling.
+- **The Brewfile describes the machine.** After installing or removing something, update the Brewfile; `brew bundle cleanup --file=~/.dotfiles/homebrew/Brewfile` lists what it lacks, without uninstalling. Installed outside Homebrew, on purpose: Parallels Desktop, Microsoft Office, OneDrive, Codex, ChatGPT, Postico 2.
 
 Update the packages:
 

@@ -133,9 +133,6 @@ cask "figma"
 # Virtualization and remote
 #######################
 
-# Virtual machines
-cask "parallels"
-
 # Windows apps without Windows
 cask "crossover"
 
@@ -160,10 +157,6 @@ cask "tor-browser"
 mas "Keynote", id: 361285480
 mas "Numbers", id: 361304891
 mas "Pages", id: 361309726
-cask "microsoft-word"
-cask "microsoft-excel"
-cask "microsoft-powerpoint"
-cask "onedrive"
 
 #######################
 # Communication
