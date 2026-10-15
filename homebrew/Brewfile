@@ -33,6 +33,9 @@ brew "git-lfs"
 # Rewrite git history
 brew "git-filter-repo"
 
+# Audit git repos for secrets
+brew "gitleaks"
+
 # GitHub CLI
 brew "gh"
 
