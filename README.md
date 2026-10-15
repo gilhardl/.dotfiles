@@ -70,6 +70,7 @@ The Claude Code configuration (global `CLAUDE.md`, `settings.json`, personal ski
 | 2026-10-12 | `docker` formula | Docker Desktop ships the CLI; the formula could not be linked over it |
 | 2026-10-12 | `python@3` formula | `uv` manages Python versions; Homebrew keeps the Python its formulae depend on |
 | 2026-10-12 | `nixfmt` and the nix-darwin marker in `/opt/homebrew` | left over from a nix-darwin trial, uninstalled |
+| 2026-10-15 | `node@24` formula | `node` (26) is the only Node.js in use; `mongosh` already pulled it in and it shadowed `node@24`, which is keg-only |
 | 2026-10-12 | ZSH plugins as git submodules (zen.zsh, zsh-completions…) | plugins come from Homebrew; zsh-completions was dead code without `compinit` |
 
 ## License

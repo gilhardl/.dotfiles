@@ -8,7 +8,7 @@ cask "font-sf-mono-nerd-font-ligaturized"
 #######################
 
 # Node.js
-brew "node@24"
+brew "node"
 
 # Python versions and packages
 brew "uv"
